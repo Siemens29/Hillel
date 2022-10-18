@@ -8,3 +8,10 @@ def generate_male_name():
 
 print(generate_male_name())
 
+
+def generate_female_name():
+    female = names.get_full_name(gender='female')
+    return female
+
+
+print(generate_female_name())
