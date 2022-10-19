@@ -3,15 +3,25 @@ import names
 
 def generate_male_name():
     male = names.get_full_name(gender='male')
-    return male
+    return print(male)
 
 
-print(generate_male_name())
+generate_male_name()
 
 
 def generate_female_name():
     female = names.get_full_name(gender='female')
-    return female
+    return print(female)
 
 
-print(generate_female_name())
+generate_female_name()
+
+
+def random_family():
+    male_name: str = ' '.join(names.get_full_name(gender='male').split(' ')[0:1])
+    female_name = ' '.join(names.get_full_name(gender='female').split(' ')[0:1])
+    last_name = ' '.join(names.get_full_name(gender='male').split(' ')[1:])
+    return print(f"{male_name} and {female_name} {last_name}")
+
+
+random_family()
